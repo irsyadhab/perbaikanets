@@ -13,15 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
             data.results.forEach((pokemon) => {
                 const cardHtml = `
                     <div class="col-md-3 mb-3 d-flex">
-                        <div class="card flex-fill">
-                            <div class="card-body shadow d-flex flex-column">
-                                <h5 class="card-title text-center">${pokemon.name}</h5>
+                        <div class="card text-center flex-fill">
+                            <div class="card-body shadow flex-column">
+                                <p class="card-title text-center">${pokemon.name}</p>
                                 <a href="${pokemon.url}" class="btn btn-primary mt-auto">Detail</a>
                             </div>
                         </div>
                     </div>
                 `;
-
                 PokemonList.innerHTML += cardHtml;
             });
         } else {
